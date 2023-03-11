@@ -19,12 +19,12 @@ class MemberRepositoryTest {
     @Rollback(false)
     public void testMember() throws Exception {
         // given
-        Member member = new Member();
+        TestMember member = new TestMember();
         member.setUsername("memberA");
 
         // when
         Long saveId = memberRepository.save(member);
-        Member findMember = memberRepository.find(saveId);
+        TestMember findMember = memberRepository.find(saveId);
 
         // then
         assertThat(findMember.getId()).isEqualTo(member.getId());

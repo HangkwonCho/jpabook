@@ -7,10 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-//@Entity
+@Entity
 @Getter
 @Setter
-public class Member {
+public class TestMember {
 
     @Id
     @GeneratedValue
